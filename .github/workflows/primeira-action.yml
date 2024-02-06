@@ -1,0 +1,16 @@
+name: "CI (integração continua): primera action"
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Primeira action
+        run: echo Ola mundo!
