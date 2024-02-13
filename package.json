@@ -1,8 +1,8 @@
 {
-  "name": "06-github-actions-front-end",
+  "name": "alura-github-actions-frontend",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Mario Souto <13791385+omariosouto@users.noreply.github.com>",
+  "author": "valdenir trevisan junior",
   "license": "MIT",
   "dependencies": {
     "next": "^12.1.6",
@@ -11,10 +11,12 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf build && next export && mv ./out ./build",
+    "build": "rm -rf build && next build && next export && mv ./out ./build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "deploy": "npx vercel ./build --confirm --no-clipboard",
+    "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN"
   },
   "devDependencies": {
     "eslint": "8.56.0",
