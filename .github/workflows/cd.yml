@@ -18,5 +18,8 @@ jobs:
       - name: run install dependencies
         run: yarn install
       
+      - name: run build
+        run: yarn build
+
       - name: run deploy
         run: yarn deploy:prod
