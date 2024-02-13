@@ -15,7 +15,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "deploy": "npx vercel ./build --yes --no-clipboard",
+    "deploy": "npx vercel ./build --yes",
     "deploy:prod": "yarn deploy --prod --token=$VERCEL_TOKEN"
   },
   "devDependencies": {
